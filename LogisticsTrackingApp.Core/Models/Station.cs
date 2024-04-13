@@ -14,6 +14,6 @@ namespace LogisticsTrackingApp.Core.Models
         public string Destination { get; set; }
 
 
-		public ICollection<Shipment> Shipments { get; set; }
+		
 	}
 }

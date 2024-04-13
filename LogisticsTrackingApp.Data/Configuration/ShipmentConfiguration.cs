@@ -18,12 +18,9 @@ namespace LogisticsTrackingApp.Data.Configuration
 			builder.HasKey(x => x.Id);
 			builder.Property(x => x.Id).UseIdentityColumn();
 
-			builder.Property(x => x.DeliverDate).IsRequired();
-			builder.Property(x => x.TrackingNumber).IsRequired();
 			
 
 
-			builder.HasOne(x => x.Customer).WithMany(x => x.Shipments).HasForeignKey(x => x.CustomerId);
 		}
 	}
 }

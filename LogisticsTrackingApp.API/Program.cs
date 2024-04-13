@@ -40,7 +40,7 @@ builder.Services.AddSwaggerGen();
 
 
 var connectionString = builder.Configuration.GetConnectionString("DbCon");
-builder.Services.AddDbContext<LogisticsDbContext>(x => x.UseNpgsql(connectionString));
+builder.Services.AddDbContext<LogisticsDbContext>(x => x.UseSqlServer(connectionString));
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
@@ -55,6 +55,8 @@ builder.Services.AddSingleton<StackExchange.Redis.IDatabase>(sp =>
 	var redisService = sp.GetRequiredService<RedisService>();
 	return redisService.GetDatabase(0);
 });
+
+
 
 
 
@@ -75,10 +77,11 @@ if (app.Environment.IsDevelopment())
 
 
 
+
 app.UseHttpsRedirection();
 
-
 app.UseCustomException();
+
 
 app.UseAuthorization();
 

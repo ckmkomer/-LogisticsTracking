@@ -17,11 +17,10 @@ namespace LogisticsTrackingApp.Core.Models
 		public string ShippingAddress { get; set; }
 		public string BillingAddress { get; set; }
 
-		public int CustomerId { get; set; }
-		public Customer Customer { get; set; }
+
 		public ICollection<OrderItem> OrderItems { get; set; }
 		public ICollection<Shipment> Shipments { get; set; }
 
-		
+
 	}
 }

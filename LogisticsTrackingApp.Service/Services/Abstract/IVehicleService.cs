@@ -11,17 +11,17 @@ namespace LogisticsTrackingApp.Service.Services.Abstract
 {
 	public interface IVehicleService:IService<Vehicle>
 	{
-		Task AddVehicleAsync(CreateVehicleDto createVehicle);
+		//Task AddVehicleAsync(CreateVehicleDto createVehicle);
 
 
-		Task UpdateVehicleAsync(int id, UpdateVehicleDto updatedVehicle);
+		//Task UpdateVehicleAsync(int id, UpdateVehicleDto updatedVehicle);
 
 
 
-		Task DeleteVehicleAsync(int id);
+		//Task DeleteVehicleAsync(int id);
 
 		
-		Task<List<ResultVehicleDto>> GetAllVehicleAsync();
+		//Task<List<ResultVehicleDto>> GetAllVehicleAsync();
 
 	}
 }

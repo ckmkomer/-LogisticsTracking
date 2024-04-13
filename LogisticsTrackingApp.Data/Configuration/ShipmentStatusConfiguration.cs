@@ -18,7 +18,7 @@ namespace LogisticsTrackingApp.Data.Configuration
 			builder.HasKey(x => x.Id);
 			builder.Property(x => x.Id).UseIdentityColumn();
 
-			builder.Property(x => x.Status).IsRequired().HasMaxLength(20);
+			builder.Property(x => x.Status).HasMaxLength(20);
 			
 		}
 	}
